@@ -1,6 +1,6 @@
 # terraform-kubernetes-aws-load-balancer-controller
 
-Terraform module which deploys Jet Stack Cert Manager
+Terraform module which deploys AWS Load Balancer Controller
 
 [![Lint Status](https://github.com/bailey84j/terraform-kubernetes-aws-load-balancer-controller/actions/workflows/main.yml/badge.svg)](https://github.com/bailey84j/terraform-kubernetes-aws-load-balancer-controller/actions/workflows/main.yml)
 [![LICENSE](https://img.shields.io/github/license/bailey84j/terraform-kubernetes-aws-load-balancer-controller)](https://github.com/bailey84j/terraform-kubernetes-aws-load-balancer-controller/blob/master/LICENSE)
@@ -8,8 +8,8 @@ Terraform module which deploys Jet Stack Cert Manager
 
 ## Examples
 
-- [Standard](https://github.com/bailey84j/terraform-kubernetes-aws-load-balancer-controller/tree/master/examples/standard): Deploying jetstack certmanager using the default settings
-- [Custom](https://github.com/bailey84j/terraform-kubernetes-aws-load-balancer-controller/tree/master/examples/custom): Customising the deployment to use a different api_group, name and namespace 
+- [Standard](https://github.com/bailey84j/terraform-kubernetes-aws-load-balancer-controller/tree/master/examples/standard): Deploying AWS Load Balancer Controller using the default settings
+- [Custom](https://github.com/bailey84j/terraform-kubernetes-aws-load-balancer-controller/tree/master/examples/custom): Customising the deployment to use a different name and namespace 
 
 ## Contributing
 
