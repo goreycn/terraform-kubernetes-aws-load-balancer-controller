@@ -5,7 +5,7 @@ about: Suggest an idea for this project
 ---
 
 ## Is your request related to a new offering?
-<!-- Is this feature available in the jetstack cert manager -->
+<!-- Is this feature available in the AWS Load Balancer Controller -->
 
 ## Is your request related to a problem? Please describe.
 <!-- A clear and concise description of what the problem is. Ex. I'm always frustrated when ... -->
