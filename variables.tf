@@ -106,5 +106,7 @@ variable "iam_role_tags" {
 ################################################################################
 
 variable "eks_cluster_name" {
+  description = "The name of the target Kubernetes Cluster"
+  type        = string
 
 }

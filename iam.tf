@@ -1,10 +1,9 @@
-// region aws iam role
+# region aws iam role
 
 locals {
-  iam_role_name     = coalesce(var.iam_role_name, "${var.eks_cluster_name}-${var.name}")
-  policy_arn_prefix = "arn:${data.aws_partition.current.partition}:iam::aws:policy"
+  iam_role_name = coalesce(var.iam_role_name, "${var.eks_cluster_name}-${var.name}")
 }
-// to be updated
+
 data "aws_iam_policy_document" "assume_role_policy" {
   count = var.create_iam_role ? 1 : 0
 
@@ -46,4 +45,4 @@ resource "aws_iam_role" "this" {
 
 }
 
-// endregion aws iam role
+# endregion aws iam role
