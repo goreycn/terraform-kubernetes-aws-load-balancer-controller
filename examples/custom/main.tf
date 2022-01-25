@@ -1,7 +1,8 @@
 locals {
   # Your AWS EKS Cluster ID goes here.
-  k8s_cluster_name = "my-k8s-cluster"
+  k8s_cluster_name = var.k8s_cluster_name
 }
+
 
 provider "aws" {
   region = "us-west-1"
