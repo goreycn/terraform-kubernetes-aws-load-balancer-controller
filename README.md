@@ -2,8 +2,9 @@
 
 Terraform module which deploys AWS Load Balancer Controller
 
-[![Lint Status](https://github.com/bailey84j/terraform-kubernetes-aws-load-balancer-controller/actions/workflows/main.yml/badge.svg)](https://github.com/bailey84j/terraform-kubernetes-aws-load-balancer-controller/actions/workflows/main.yml)
+[![tflint](https://github.com/bailey84j/terraform-kubernetes-aws-load-balancer-controller/actions/workflows/tflint.yml/badge.svg)](https://github.com/bailey84j/terraform-kubernetes-aws-load-balancer-controller/actions/workflows/tflint.yml)
 [![LICENSE](https://img.shields.io/github/license/bailey84j/terraform-kubernetes-aws-load-balancer-controller)](https://github.com/bailey84j/terraform-kubernetes-aws-load-balancer-controller/blob/master/LICENSE)
+[![Terraform](https://img.shields.io/badge/tf->%3D0.14.8-blue.svg)](https://www.terraform.io/downloads)
 
 
 ## Examples
