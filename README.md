@@ -32,12 +32,13 @@ Full contributing [guidelines are covered here](https://github.com/bailey84j/ter
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.63 |
 | <a name="provider_kubernetes"></a> [kubernetes](#provider\_kubernetes) | >= 2.0 |
+| <a name="provider_null"></a> [null](#provider\_null) | n/a |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_jetstack_certmanager"></a> [jetstack\_certmanager](#module\_jetstack\_certmanager) | github.com/bailey84j/terraform-kubernetes-jetstack-certmanager | v1.0.0 |
+| <a name="module_jetstack_certmanager"></a> [jetstack\_certmanager](#module\_jetstack\_certmanager) | github.com/bailey84j/terraform-kubernetes-jetstack-certmanager | v1.0.2 |
 
 ## Resources
 
@@ -57,6 +58,7 @@ Full contributing [guidelines are covered here](https://github.com/bailey84j/ter
 | [kubernetes_service.aws_load_balancer_webhook_service](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/service) | resource |
 | [kubernetes_service_account.aws_load_balancer_controller](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/service_account) | resource |
 | [kubernetes_validating_webhook_configuration.aws_load_balancer_webhook](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/validating_webhook_configuration) | resource |
+| [null_resource.this](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) | resource |
 | [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
 | [aws_eks_cluster.target](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/eks_cluster) | data source |
 | [aws_iam_policy_document.assume_role_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
@@ -76,6 +78,7 @@ Full contributing [guidelines are covered here](https://github.com/bailey84j/ter
 | <a name="input_iam_role_use_name_prefix"></a> [iam\_role\_use\_name\_prefix](#input\_iam\_role\_use\_name\_prefix) | Determines whether the IAM role name (`iam_role_name`) is used as a prefix | `string` | `true` | no |
 | <a name="input_image_name"></a> [image\_name](#input\_image\_name) | the name of the container image to use | `string` | `"aws-alb-ingress-controller"` | no |
 | <a name="input_image_version"></a> [image\_version](#input\_image\_version) | The version of the conatiner image to use | `string` | `"v2.3.1"` | no |
+| <a name="input_install_certmanager"></a> [install\_certmanager](#input\_install\_certmanager) | Decide if you would like to install cert manager - this is not currently working in module | `bool` | `false` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the Controller | `string` | `"aws-load-balancer-controller"` | no |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | The namespace to place the controller | `string` | `"kube-system"` | no |
 | <a name="input_prefix_separator"></a> [prefix\_separator](#input\_prefix\_separator) | The separator to use between the prefix and the generated timestamp for resource names | `string` | `"-"` | no |
