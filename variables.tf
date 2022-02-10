@@ -43,6 +43,14 @@ variable "image_version" {
 
 }
 
+variable "install_certmanager" {
+  description = "Decide if you would like to install cert manager - this is not currently working in module"
+  type        = bool
+  default     = false
+}
+
+
+
 ################################################################################
 # IAM Role Variables
 ################################################################################

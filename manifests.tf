@@ -684,11 +684,16 @@ resource "kubernetes_manifest" "customresourcedefinition_targetgroupbindings_elb
   }
 }
 
+resource "null_resource" "this" {
+  depends_on = [
+    module.jetstack-certmanager.api_group
+  ]
+}
 
 
 resource "kubernetes_manifest" "certificate_kube_system_aws_load_balancer_serving_cert" {
   manifest = {
-    "apiVersion" = "${module.jetstack_certmanager.api_group}/v1"
+    "apiVersion" = "${module.jetstack-certmanager.api_group}/v1"
     "kind"       = "Certificate"
     "metadata" = {
       "labels" = {
@@ -710,14 +715,16 @@ resource "kubernetes_manifest" "certificate_kube_system_aws_load_balancer_servin
     }
   }
 
+  computed_fields = ["apiVersion"]
+
   depends_on = [
-    module.jetstack_certmanager
+    null_resource.this
   ]
 }
 
 resource "kubernetes_manifest" "issuer_kube_system_aws_load_balancer_selfsigned_issuer" {
   manifest = {
-    "apiVersion" = "cert-manager.io/v1"
+    "apiVersion" = "${module.jetstack-certmanager.api_group}/v1"
     "kind"       = "Issuer"
     "metadata" = {
       "labels" = {
@@ -731,7 +738,9 @@ resource "kubernetes_manifest" "issuer_kube_system_aws_load_balancer_selfsigned_
     }
   }
 
+  computed_fields = ["apiVersion"]
+
   depends_on = [
-    module.jetstack_certmanager
+    null_resource.this
   ]
 }
