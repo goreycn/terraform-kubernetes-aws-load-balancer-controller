@@ -34,7 +34,7 @@ $ terraform apply
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.63 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 3.73.0 |
 
 ## Modules
 
@@ -51,7 +51,9 @@ $ terraform apply
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_k8s_cluster_name"></a> [k8s\_cluster\_name](#input\_k8s\_cluster\_name) | The name of the target Kubernetes Cluster | `string` | n/a | yes |
 
 ## Outputs
 
